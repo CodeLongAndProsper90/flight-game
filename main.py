@@ -19,10 +19,10 @@ while not ded:
     pressed = pygame.key.get_pressed()
 
     if pressed[pygame.K_w]:
-        pass
+        p1y -= 5
 
     elif pressed[pygame.K_s]:
-        pass
+        p1y += 5
 
     elif pressed[pygame.K_a]:
         p1ro = (p1ro - 5) % 360
@@ -36,14 +36,19 @@ while not ded:
     pygame.display.update()
     clock.tick(60)
 
-    def i(self):
-        self.goto(self.xcor(), self.ycor() + self.in_game_speed)
+def i():
+    goto(xcor(), ycor() + in_game_speed)
 
-    def w(self):
-        self.goto(self.xcor(), self.ycor() + self.in_game_speed)
+def w():
+    goto(xcor(), ycor() + in_game_speed)
 
-    def k(self):
-        self.goto(self.xcor(), self.ycor() - self.in_game_speed)
+def k():
+    goto(xcor(), ycor() - in_game_speed)
 
-    def s(self):
-        self.goto(self.xcor(), self.ycor() - self.in_game_speed)
+def s():
+    goto(xcor(), ycor() - in_game_speed)
+
+screen.onkeypress(player.up, "i")
+screen.onkeypress(player.up, "w")
+screen.onkeypress(player.down, "k")
+screen.onkeypress(player.down, "s")
