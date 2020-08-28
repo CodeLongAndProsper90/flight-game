@@ -1,0 +1,17 @@
+import pygame
+
+while True:
+
+    break
+pygame.init()
+display = pygame.display.set_mode((800, 600))
+
+#pygame.display.set_name("foo")
+clock = pygame.time.Clock()
+
+ded = False
+
+while not ded:
+
+    pygame.display.update()
+    clock.tick(60)
