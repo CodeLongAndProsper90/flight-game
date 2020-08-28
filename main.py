@@ -36,3 +36,14 @@ while not ded:
     pygame.display.update()
     clock.tick(60)
 
+    def i(self):
+        self.goto(self.xcor(), self.ycor() + self.in_game_speed)
+
+    def w(self):
+        self.goto(self.xcor(), self.ycor() + self.in_game_speed)
+
+    def k(self):
+        self.goto(self.xcor(), self.ycor() - self.in_game_speed)
+
+    def s(self):
+        self.goto(self.xcor(), self.ycor() - self.in_game_speed)
